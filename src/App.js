@@ -36,7 +36,9 @@ function App() {
           <Forecast icon="CLOUDY" color="white" size={50} />
         </div>
       </div>
-    </div> 
+       <div className="footer"> <small> <a href="https://vigilant-jennings-2bd54d.netlify.app/" target="_blank" rel="noreferrer"> Open-source code</a> by Cassandra Ghysel </small> </div>
+    </div>
+  
   );
 }
 

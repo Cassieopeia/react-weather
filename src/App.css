@@ -18,3 +18,9 @@ body {
   padding-left: 15px;
   box-shadow: 5px 4px 8px 2px rgba(0, 0, 0, 0.25);
 }
+
+.footer {
+  font-size: 17px;
+  position: fixed;
+  padding-top: 20px;
+}
