@@ -1,0 +1,15 @@
+form {
+  display: inline-block;
+  line-height: 0, 5;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+::placeholder {
+  color: rgb(171, 182, 197);
+}
+
+#mapMarker {
+  font-size: 25px;
+  padding-left: 10px;
+  color: rgb(244, 250, 255);
+}

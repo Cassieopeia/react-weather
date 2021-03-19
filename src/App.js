@@ -1,24 +1,42 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import Search from "./Search";
+import Date from "./Date";
+import HumiditySpeed from "./HumiditySpeed";
+import City from "./City";
+import WeatherIcon from "./WeatherIcon";
+import Description from "./Description";
+import Forecast from "./Forecast";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="wrapper">
+        <div className="row">
+          <div className="col">
+            <Search />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-6">
+            <Date />
+            <HumiditySpeed />
+          </div>
+          <div className="col-6">
+            <City />
+            <WeatherIcon />
+            <Description />
+          </div>
+        </div>
+        <div className="row">
+          <Forecast icon="CLEAR_DAY" color="white" size={50} />
+          <Forecast icon="CLEAR_DAY" color="white" size={50} />
+          <Forecast icon="RAIN" color="white" size={50} />
+          <Forecast icon="RAIN" color="white" size={50} />
+          <Forecast icon="CLOUDY" color="white" size={50} />
+        </div>
+      </div>
+    </div> 
   );
 }
 
