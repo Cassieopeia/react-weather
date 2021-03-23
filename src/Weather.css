@@ -1,0 +1,48 @@
+.Weather {
+  display: block;
+}
+ul .Date {
+  list-style-type: none;
+  text-align: center;
+  font-size: 20px;
+  color: #fef8ff;
+  padding-top: 10px;
+}
+
+ul .Temperature {
+  list-style-type: none;
+  text-align: center;
+  font-size: 65px;
+  color: #fef8ff;
+}
+
+ul .Humidity {
+  list-style-type: none;
+  text-align: center;
+  color: rgb(247, 247, 247);
+}
+ul .Speed {
+  list-style-type: none;
+  text-align: center;
+  color: rgb(247, 247, 247);
+}
+//search
+form {
+  line-height: 0, 5;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+::placeholder {
+  color: rgb(171, 182, 197);
+}
+
+#mapMarker {
+  font-size: 25px;
+  padding-left: 10px;
+
+  color: rgb(244, 250, 255);
+}
+
+input.btn.btn-light {
+  margin-left: 10px;
+}
