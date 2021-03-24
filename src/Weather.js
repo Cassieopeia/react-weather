@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Weather.css";
 import WeatherDate from "./WeatherDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 
 export default function Weather(props) {
@@ -59,7 +60,8 @@ export default function Weather(props) {
       <li className="Date">
         <WeatherDate date={weatherData.date} /> 
       </li>
-      <li className="Temperature">{Math.round(weatherData.temperature)}°C </li>
+      <WeatherTemperature celsius={weatherData.temperature} />
+      
     </ul>
     <ul>
       <li className="Humidity">Humidity: {weatherData.humidity}%</li>
