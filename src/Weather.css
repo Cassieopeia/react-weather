@@ -5,7 +5,7 @@ ul .Date {
   list-style-type: none;
   text-align: center;
   font-size: 20px;
-  color: #fef8ff;
+  color: rgb(247, 247, 247);
   padding-top: 10px;
 }
 
@@ -13,7 +13,7 @@ ul .Temperature {
   list-style-type: none;
   text-align: center;
   font-size: 65px;
-  color: #fef8ff;
+  color: rgb(247, 247, 247);
 }
 
 ul .Humidity {
@@ -32,7 +32,7 @@ ul .Speed {
   font-size: 40px;
   text-transform: uppercase;
   padding-top: 10px;
-  color: #fef8ff;
+  color: rgb(247, 247, 247);
 }
 
 div.BigIcon {
@@ -45,7 +45,7 @@ h2 {
   text-align: center;
   font-size: 20px;
   padding-top: 10px;
-  color: #fef8ff;
+  color: rgb(247, 247, 247);
 }
 
 form {
@@ -60,13 +60,6 @@ input.form-control {
 
 ::placeholder {
   color: rgb(171, 182, 197);
-}
-
-#mapMarker {
-  font-size: 25px;
-  padding-left: 10px;
-
-  color: rgb(244, 250, 255);
 }
 
 input.btn.btn-light {
