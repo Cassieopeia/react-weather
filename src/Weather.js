@@ -4,6 +4,7 @@ import "./Weather.css";
 import WeatherDate from "./WeatherDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
 
 
 export default function Weather(props) {
@@ -40,22 +41,21 @@ export default function Weather(props) {
 
     if (weatherData.ready) {
     return (
-    <div className="Weather">   
+    <div className="Weather">
+        <form onSubmit={handleSubmit}>
         <div className="row">
-          <div className="col">
-     <form onSubmit={handleSubmit}> 
+          <div className="col-9">
+      
       <input type="search"
         placeholder="Search city"
         className="form-control"
-        onChange={handleCityChange} />
-      <input type="submit" value="Search" className="btn btn-light" />
-      <i className="fas fa-map-marker-alt" id="mapMarker"></i>
-      </form>
-        </div>
+        onChange={handleCityChange} />  
+       </div> 
+       <input type="submit" value="Search" className="btn btn-light" /> 
        </div>
-       
+       </form>
          <div className="row">
-          <div className="col-6">
+          <div className="col-7">
       <ul>
       <li className="Date">
         <WeatherDate date={weatherData.date} /> 
@@ -68,12 +68,16 @@ export default function Weather(props) {
       <li className="Speed">Wind: {weatherData.wind} km/h</li>
     </ul>
         </div>
-        <div className="col-6">
+        <div className="col-5">
        <h1 className="City"> {weatherData.city} </h1> 
-       <WeatherIcon code={weatherData.icon} /> 
+       <div className="BigIcon"> <WeatherIcon code={weatherData.icon}  /> </div>
        <h2 className="Description"> {weatherData.description} </h2> 
     </div>
     </div>
+    <div className="row">
+          <WeatherForecast city={weatherData.city} />
+         
+        </div>
     </div>
     ); 
 } else {

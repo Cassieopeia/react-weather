@@ -29,10 +29,16 @@ ul .Speed {
 
 .City {
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   text-transform: uppercase;
   padding-top: 10px;
   color: #fef8ff;
+}
+
+div.BigIcon {
+  padding-left: 75px;
+  display: block;
+  margin: auto;
 }
 
 h2 {
@@ -47,6 +53,11 @@ form {
   padding-top: 10px;
   padding-bottom: 30px;
 }
+
+input.form-control {
+  width: 100%;
+}
+
 ::placeholder {
   color: rgb(171, 182, 197);
 }
@@ -59,5 +70,6 @@ form {
 }
 
 input.btn.btn-light {
+  display: block;
   margin-left: 10px;
 }

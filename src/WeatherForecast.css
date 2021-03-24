@@ -1,0 +1,14 @@
+.row {
+  margin: auto;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+.WeatherForecast {
+  text-align: center;
+  color: #fef8ff;
+}
+
+.WeatherForecast canvas {
+  display: block;
+  margin: auto;
+}
