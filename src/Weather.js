@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import WeatherDate from "./WeatherDate";
+import WeatherIcon from "./WeatherIcon";
 
 
 export default function Weather(props) {
@@ -12,7 +14,7 @@ export default function Weather(props) {
         ready: true,
         temperature: response.data.main.temp,
         humidity: response.data.main.humidity,
-        date: new Date(response.data * 1000),
+        date: new Date(response.data.dt * 1000),
         description: response.data.weather[0].description,
         icon: response.data.weather[0].icon,
         wind: response.data.wind.speed,
@@ -54,15 +56,22 @@ export default function Weather(props) {
          <div className="row">
           <div className="col-6">
       <ul>
-      <li className="Date">Friday 14:06 </li>
+      <li className="Date">
+        <WeatherDate date={weatherData.date} /> 
+      </li>
       <li className="Temperature">{Math.round(weatherData.temperature)}°C </li>
     </ul>
     <ul>
-      <li className="Humidity">Humidity: 30%</li>
-      <li className="Speed">Wind Speed: km/h</li>
+      <li className="Humidity">Humidity: {weatherData.humidity}%</li>
+      <li className="Speed">Wind: {weatherData.wind} km/h</li>
     </ul>
         </div>
-        </div>
+        <div className="col-6">
+       <h1 className="City"> {weatherData.city} </h1> 
+       <WeatherIcon code={weatherData.icon} /> 
+       <h2 className="Description"> {weatherData.description} </h2> 
+    </div>
+    </div>
     </div>
     ); 
 } else {
