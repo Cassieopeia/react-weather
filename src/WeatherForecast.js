@@ -8,6 +8,8 @@ export default function WeatherForecast(props) {
   const [loaded, setLoaded] = useState(false);
   const [forecast, setForecast] = useState(null);
 
+
+
   function handleForecastResponse(response) {
     setForecast(response.data);
     setLoaded(true);
@@ -28,6 +30,7 @@ export default function WeatherForecast(props) {
     );
   } else {
     let apiKey = "7d00b6786f1190b8a64b233c6af4caac"
+    
     let url = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=metric`;
   
   axios.get(url).then(handleForecastResponse);

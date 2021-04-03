@@ -60,7 +60,7 @@ export default function Weather(props) {
       <li className="Date">
         <WeatherDate date={weatherData.date} /> 
       </li>
-      <WeatherTemperature celsius={weatherData.temperature} />
+      <WeatherTemperature celsius={weatherData.temperature}  />
       
     </ul>
     <ul>
